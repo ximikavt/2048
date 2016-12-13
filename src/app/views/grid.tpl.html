@@ -1,0 +1,10 @@
+<div class="game">
+    <div class="grid-container">
+        <div class="grid-cell" ng-repeat="cell in model.grid track by $index">
+        </div>
+    </div>
+    <div class="tile-container">
+        <div tile data-model='tile' ng-repeat='tile in model.tiles track by $id(tile.id || $index)'>
+        </div>
+    </div>
+</div>
