@@ -1,0 +1,20 @@
+<div ng-controller="MainAppController as vm" class="app-holder">
+    <div class="heading">
+        <button ng-click="vm.newGame()" class="restart-button">New game</button>
+        <h1 class="title">2048</h1>
+        <div class="scores-container">
+            <div class="score-container" ng-bind="vm.game.currentScore"></div>
+            <div class="best-container" ng-bind="vm.game.highScore"></div>
+        </div>
+    </div>
+    <div class="game-container">
+        <div grid data-model="vm.gs">
+        </div>
+        <div class="game-over" ng-if="vm.game.gameOver" class="game-overlay">
+            Game over
+            <div class="lower">
+                <a class="retry-button" ng-click='vm.newGame()'>Try again</a>
+            </div>
+        </div>
+    </div>
+</div>
